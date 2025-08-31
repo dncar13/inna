@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Important pages for SEO
+Allow: /about
+Allow: /services  
+Allow: /testimonials
+
+# Sitemap location
+Sitemap: https://your-domain.com/sitemap.xml
+
+# Social media crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /

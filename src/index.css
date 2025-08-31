@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RTL Support for Hebrew */
+html {
+  direction: rtl;
+}
+
+body {
+  direction: rtl;
+}
+
+/* Eina Peretz Parent Coach Design System - Warm, Elegant, Professional */
+
+@layer base {
+  :root {
+    /* Warm, elegant color palette for parent coaching */
+    --background: 35 15% 98%; /* Soft cream */
+    --foreground: 25 25% 25%; /* Warm dark brown */
+
+    --card: 35 15% 99%;
+    --card-foreground: 25 25% 25%;
+
+    --popover: 35 15% 99%;
+    --popover-foreground: 25 25% 25%;
+
+    /* Soft, trustworthy blue primary */
+    --primary: 210 45% 45%; /* Calm blue */
+    --primary-foreground: 35 15% 98%;
+
+    /* Warm beige secondary */
+    --secondary: 35 20% 92%; /* Soft beige */
+    --secondary-foreground: 25 25% 25%;
+
+    --muted: 35 12% 90%;
+    --muted-foreground: 25 15% 55%;
+
+    /* Gentle pink accent */
+    --accent: 340 30% 85%; /* Soft pink */
+    --accent-foreground: 25 25% 25%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 35 15% 98%;
+
+    --border: 35 15% 88%;
+    --input: 35 15% 93%;
+    --ring: 210 45% 45%;
+
+    --radius: 0.75rem;
+    
+    /* Custom semantic colors for coaching brand */
+    --warm: 35 35% 75%; /* Warm beige for highlights */
+    --trust: 210 45% 65%; /* Lighter trust blue */
+    --gentle: 340 25% 88%; /* Very soft pink */
+    --nature: 120 25% 75%; /* Soft sage green */
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--trust)));
+    --gradient-warm: linear-gradient(180deg, hsl(var(--background)), hsl(var(--warm) / 0.3));
+    --gradient-gentle: linear-gradient(45deg, hsl(var(--gentle)), hsl(var(--accent)));
+    
+    /* Shadows for warmth */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-warm: 0 8px 30px hsl(var(--warm) / 0.15);
+    --shadow-gentle: 0 2px 15px hsl(var(--gentle) / 0.2);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-gentle: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Accessibility Styles */
+.accessibility-high-contrast {
+  filter: contrast(200%);
+}
+
+.accessibility-inverted {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.accessibility-highlight-links a,
+.accessibility-highlight-links button {
+  outline: 3px solid hsl(var(--primary)) !important;
+  outline-offset: 2px !important;
+  background-color: hsl(var(--primary) / 0.1) !important;
+}
+
+.accessibility-keyboard-nav *:focus {
+  outline: 3px solid hsl(var(--primary)) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 6px hsl(var(--primary) / 0.2) !important;
+}
+
+/* Skip to content link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* WhatsApp-style testimonials */
+.wa-wrap{
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+  background:#ece5dd;           /* רקע צ'אט */
+  border-radius:16px;
+}
+
+.wa-msg{ margin: 16px 0; display:flex; }
+.wa-bubble{
+  position: relative;
+  padding: 12px 14px 22px;      /* מקום למטה ל-meta */
+  border-radius: 14px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.08);
+  line-height: 1.6;
+  font-size: 16px;
+  background:#dcf8c6;           /* ירוק בהיר (incoming) */
+  max-width: 100%;
+}
+
+.wa-in{ margin-inline-start: auto; margin-inline-end: 8px; } /* יישור לימין ב-RTL */
+
+.wa-bubble::after{
+  content:"";
+  position:absolute;
+  top:10px;
+  right:-8px;                   /* זנב לימין */
+  border-width:8px 0 8px 8px;
+  border-style:solid;
+  border-color: transparent transparent transparent #dcf8c6;
+}
+
+.wa-meta{
+  position:absolute;
+  bottom:6px;
+  left:10px;                    /* ב-RTL, "שעה" בצד שמאל כמו בוואטסאפ */
+  font-size:12px;
+  color:#667781;
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+
+.wa-checks{ opacity:.7; }
+
+/* טיפוגרפיה ונגישות */
+.wa-wrap, .wa-wrap *{
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans Hebrew", "Rubik", sans-serif;
+}
+.wa-bubble p{ margin:0; }
+.wa-bubble p + p { margin-top:8px; }
+
+/* רספונסיביות */
+@media (max-width: 480px){
+  .wa-wrap{ padding:16px 12px 28px; }
+  .wa-bubble{ font-size:15px; }
+}
+
+/* מצב כהה (אם יש prefers-color-scheme) */
+@media (prefers-color-scheme: dark){
+  .wa-wrap{ background:#0b141a; }
+  .wa-bubble{ background:#005c4b; color:#e9edef; }
+  .wa-bubble::after{ border-color: transparent transparent transparent #005c4b; }
+  .wa-meta{ color:#aebac1; }
+}

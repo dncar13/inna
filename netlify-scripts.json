@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "netlify:dev": "netlify dev",
+    "netlify:deploy": "npm run build && netlify deploy",
+    "netlify:deploy:prod": "npm run build && netlify deploy --prod",
+    "netlify:init": "netlify init",
+    "netlify:status": "netlify status",
+    "netlify:open": "netlify open"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}
