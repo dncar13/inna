@@ -7,7 +7,7 @@ Allow: /services
 Allow: /testimonials
 
 # Sitemap location
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://inaperetz.com/sitemap.xml
 
 # Social media crawlers
 User-agent: Googlebot

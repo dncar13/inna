@@ -4,38 +4,38 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://your-domain.com/</loc>
+    <loc>https://inaperetz.com/</loc>
     <lastmod>2025-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://your-domain.com/" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://inaperetz.com/" />
   </url>
   
   <!-- About page -->
   <url>
-    <loc>https://your-domain.com/about</loc>
+    <loc>https://inaperetz.com/about</loc>
     <lastmod>2025-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://your-domain.com/about" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://inaperetz.com/about" />
   </url>
   
   <!-- Services page -->
   <url>
-    <loc>https://your-domain.com/services</loc>
+    <loc>https://inaperetz.com/services</loc>
     <lastmod>2025-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://your-domain.com/services" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://inaperetz.com/services" />
   </url>
   
   <!-- Testimonials page -->
   <url>
-    <loc>https://your-domain.com/testimonials</loc>
+    <loc>https://inaperetz.com/testimonials</loc>
     <lastmod>2025-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="he" href="https://your-domain.com/testimonials" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://inaperetz.com/testimonials" />
   </url>
   
 </urlset>
